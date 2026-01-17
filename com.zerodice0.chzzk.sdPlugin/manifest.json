@@ -2,7 +2,7 @@
   "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
   "Author": "zerodice0",
   "Name": "CHZZK for Stream Deck",
-  "Description": "CHZZK 방송 제어용 Stream Deck 플러그인",
+  "Description": "CHZZK 방송 제어용 Stream Deck 플러그인 - 시청자 수 표시 및 방송 설정 변경",
   "Icon": "assets/plugin-icon",
   "Version": "1.0.0.0",
   "UUID": "com.zerodice0.chzzk",
@@ -25,20 +25,34 @@
     "Version": "20",
     "Debug": "enabled"
   },
-  "Category": "CHZZK for Stream Deck",
+  "Category": "CHZZK",
   "CategoryIcon": "assets/category-icon",
   "Actions": [
     {
-      "Icon": "assets/action-icon",
-      "Name": "CHZZK Action",
+      "Icon": "assets/viewer-count-icon",
+      "Name": "시청자 수",
       "States": [
         {
-          "Image": "assets/action-icon",
+          "Image": "assets/viewer-count-icon",
           "TitleAlignment": "middle"
         }
       ],
-      "Tooltip": "CHZZK 액션",
-      "UUID": "com.zerodice0.chzzk.action"
+      "Tooltip": "현재 시청자 수를 실시간으로 표시합니다",
+      "UUID": "com.zerodice0.chzzk.viewer-count",
+      "PropertyInspectorPath": "property-inspector/index.html"
+    },
+    {
+      "Icon": "assets/live-settings-icon",
+      "Name": "방송 설정",
+      "States": [
+        {
+          "Image": "assets/live-settings-icon",
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Tooltip": "방송 제목, 카테고리, 태그를 변경합니다",
+      "UUID": "com.zerodice0.chzzk.live-settings",
+      "PropertyInspectorPath": "property-inspector/index.html"
     }
   ]
 }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CHZZK Settings</title>
+  <link rel="stylesheet" href="sdpi.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sdpi-wrapper">
+    <!-- Authentication Section -->
+    <div class="sdpi-heading">인증</div>
+
+    <div id="auth-not-configured" class="sdpi-item">
+      <div class="sdpi-item-label">상태</div>
+      <div class="sdpi-item-value">
+        <span class="status-badge status-warning">설정 필요</span>
+      </div>
+    </div>
+
+    <div id="auth-section-setup" style="display: none;">
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Client ID</div>
+        <input class="sdpi-item-value" type="text" id="client-id" placeholder="CHZZK Client ID">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">Client Secret</div>
+        <input class="sdpi-item-value" type="password" id="client-secret" placeholder="CHZZK Client Secret">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"></div>
+        <button class="sdpi-item-value" id="save-credentials-btn">저장</button>
+      </div>
+    </div>
+
+    <div id="auth-section-login" style="display: none;">
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">상태</div>
+        <div class="sdpi-item-value">
+          <span id="auth-status" class="status-badge status-error">미인증</span>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"></div>
+        <button class="sdpi-item-value" id="login-btn">CHZZK 로그인</button>
+      </div>
+    </div>
+
+    <div id="auth-section-logged-in" style="display: none;">
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">상태</div>
+        <div class="sdpi-item-value">
+          <span class="status-badge status-success">인증됨</span>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">채널</div>
+        <div class="sdpi-item-value">
+          <span id="channel-name">-</span>
+        </div>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"></div>
+        <button class="sdpi-item-value secondary" id="logout-btn">로그아웃</button>
+      </div>
+    </div>
+
+    <div class="sdpi-item">
+      <div class="sdpi-item-label"></div>
+      <details class="sdpi-item-value">
+        <summary>Client 설정 변경</summary>
+        <div style="padding-top: 10px;">
+          <div class="sdpi-item" style="margin: 0;">
+            <input type="text" id="client-id-change" placeholder="새 Client ID" style="width: 100%;">
+          </div>
+          <div class="sdpi-item" style="margin: 5px 0 0 0;">
+            <input type="password" id="client-secret-change" placeholder="새 Client Secret" style="width: 100%;">
+          </div>
+          <div class="sdpi-item" style="margin: 5px 0 0 0;">
+            <button id="update-credentials-btn" style="width: 100%;">변경</button>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Viewer Count Settings -->
+    <div id="viewer-count-settings" style="display: none;">
+      <div class="sdpi-heading">시청자 수 설정</div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">새로고침 간격</div>
+        <div class="sdpi-item-value">
+          <input type="range" id="refresh-interval" min="10" max="120" value="30">
+          <span id="refresh-interval-value">30초</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Settings Settings -->
+    <div id="live-settings-settings" style="display: none;">
+      <div class="sdpi-heading">방송 설정 프리셋</div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">프리셋 이름</div>
+        <input class="sdpi-item-value" type="text" id="preset-name" placeholder="버튼에 표시할 이름">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">방송 제목</div>
+        <input class="sdpi-item-value" type="text" id="live-title" placeholder="변경할 방송 제목">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">카테고리</div>
+        <select class="sdpi-item-value" id="category-type">
+          <option value="">변경 안함</option>
+          <option value="GAME">게임</option>
+          <option value="SPORTS">스포츠</option>
+          <option value="ETC">기타</option>
+        </select>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">카테고리 ID</div>
+        <input class="sdpi-item-value" type="text" id="category-id" placeholder="선택사항">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">태그</div>
+        <input class="sdpi-item-value" type="text" id="tags" placeholder="쉼표로 구분 (예: 게임,라이브)">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"></div>
+        <button class="sdpi-item-value" id="fetch-current-btn">현재 설정 불러오기</button>
+      </div>
+    </div>
+
+    <!-- Change Title Settings -->
+    <div id="change-title-settings" style="display: none;">
+      <div class="sdpi-heading">방송 제목 변경</div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">방송 제목</div>
+        <input class="sdpi-item-value" type="text" id="change-title-value" placeholder="변경할 방송 제목">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"></div>
+        <button class="sdpi-item-value" id="fetch-current-title-btn">현재 제목 불러오기</button>
+      </div>
+    </div>
+
+    <!-- Change Category Settings -->
+    <div id="change-category-settings" style="display: none;">
+      <div class="sdpi-heading">카테고리 변경</div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">카테고리</div>
+        <select class="sdpi-item-value" id="change-category-type">
+          <option value="">선택하세요</option>
+          <option value="GAME">게임</option>
+          <option value="SPORTS">스포츠</option>
+          <option value="ETC">기타</option>
+        </select>
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">카테고리 ID</div>
+        <input class="sdpi-item-value" type="text" id="change-category-id" placeholder="선택사항 (세부 카테고리)">
+      </div>
+    </div>
+
+    <!-- Change Tags Settings -->
+    <div id="change-tags-settings" style="display: none;">
+      <div class="sdpi-heading">태그 변경</div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label">태그</div>
+        <input class="sdpi-item-value" type="text" id="change-tags-value" placeholder="쉼표로 구분 (예: 게임,라이브)">
+      </div>
+
+      <div class="sdpi-item">
+        <div class="sdpi-item-label"></div>
+        <button class="sdpi-item-value" id="fetch-current-tags-btn">현재 태그 불러오기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="inspector.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/**
+ * CHZZK Property Inspector Custom Styles
+ */
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 8pt;
+  font-weight: 500;
+}
+
+.status-success {
+  background: #1e4620;
+  color: #4ec9b0;
+}
+
+.status-error {
+  background: #4a1e1e;
+  color: #f48771;
+}
+
+.status-warning {
+  background: #4a3e1e;
+  color: #f4c771;
+}
+
+#refresh-interval-value {
+  display: inline-block;
+  min-width: 35px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.info-text {
+  font-size: 8pt;
+  color: #808080;
+  margin-top: 4px;
+}
+
+.error-text {
+  font-size: 8pt;
+  color: #f48771;
+  margin-top: 4px;
+}
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none !important;
+}
