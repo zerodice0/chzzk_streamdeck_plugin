@@ -53,6 +53,45 @@
       "Tooltip": "방송 제목, 카테고리, 태그를 변경합니다",
       "UUID": "com.zerodice0.chzzk.live-settings",
       "PropertyInspectorPath": "property-inspector/index.html"
+    },
+    {
+      "Icon": "assets/change-title-icon",
+      "Name": "방송 제목 변경",
+      "States": [
+        {
+          "Image": "assets/change-title-icon",
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Tooltip": "방송 제목만 변경합니다",
+      "UUID": "com.zerodice0.chzzk.change-title",
+      "PropertyInspectorPath": "property-inspector/index.html"
+    },
+    {
+      "Icon": "assets/change-category-icon",
+      "Name": "카테고리 변경",
+      "States": [
+        {
+          "Image": "assets/change-category-icon",
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Tooltip": "방송 카테고리만 변경합니다",
+      "UUID": "com.zerodice0.chzzk.change-category",
+      "PropertyInspectorPath": "property-inspector/index.html"
+    },
+    {
+      "Icon": "assets/change-tags-icon",
+      "Name": "태그 변경",
+      "States": [
+        {
+          "Image": "assets/change-tags-icon",
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Tooltip": "방송 태그만 변경합니다",
+      "UUID": "com.zerodice0.chzzk.change-tags",
+      "PropertyInspectorPath": "property-inspector/index.html"
     }
   ]
 }

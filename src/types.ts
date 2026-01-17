@@ -43,6 +43,22 @@ export type LiveSettingsActionSettings = {
   [key: string]: unknown;
 };
 
+export type ChangeTitleSettings = {
+  title?: string;
+  [key: string]: unknown;
+};
+
+export type ChangeCategorySettings = {
+  categoryType?: CategoryType;
+  categoryId?: string;
+  [key: string]: unknown;
+};
+
+export type ChangeTagsSettings = {
+  tags?: string[];
+  [key: string]: unknown;
+};
+
 // ============================================
 // CHZZK API Types
 // ============================================
