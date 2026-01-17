@@ -1,0 +1,29 @@
+{
+  "name": "com.zerodice0.chzzk",
+  "version": "1.0.0",
+  "description": "CHZZK 방송 제어용 Stream Deck 플러그인",
+  "author": "zerodice0",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/plugin.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "generate-icons": "node scripts/generate-icons.mjs",
+    "validate": "streamdeck validate com.zerodice0.chzzk.sdPlugin",
+    "link": "streamdeck link com.zerodice0.chzzk.sdPlugin"
+  },
+  "devDependencies": {
+    "@elgato/streamdeck": "^2.0.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "rollup": "^4.30.1",
+    "sharp": "^0.34.5",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Author": "zerodice0",
+  "Name": "CHZZK for Stream Deck",
+  "Description": "CHZZK 방송 제어용 Stream Deck 플러그인",
+  "Icon": "assets/plugin-icon",
+  "Version": "1.0.0.0",
+  "UUID": "com.zerodice0.chzzk",
+  "CodePath": "plugin.js",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.15"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "Category": "CHZZK for Stream Deck",
+  "CategoryIcon": "assets/category-icon",
+  "Actions": [
+    {
+      "Icon": "assets/action-icon",
+      "Name": "CHZZK Action",
+      "States": [
+        {
+          "Image": "assets/action-icon",
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Tooltip": "CHZZK 액션",
+      "UUID": "com.zerodice0.chzzk.action"
+    }
+  ]
+}
